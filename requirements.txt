@@ -1,0 +1,20 @@
+# chunkingVideos
+
+This script combines multiple large `.MP4` side-view videos and chunks them into labeled short clips using timing information from an Excel file.
+
+## Requirements
+- Python 3.x
+- FFmpeg installed on your system
+- Python packages: `pandas`, `moviepy`, `openpyxl`
+
+## How to Use
+1. Edit `sub_list` in the script to include subject IDs.
+2. Ensure files are located at:
+/videos/OlderGroup/SideView/{subject_id}/GH01.MP4 ...
+/Timeline/{subject_id}_FrontView_Labels.xlsx
+3. Run:
+```bash
+python chunkingVideos.py
+
+Output clips will be saved to:
+/home/yourname/Desktop/{subject_id}_side/
